@@ -20,10 +20,12 @@ const Todo = ({todo, onUpdate, onDelete}) => {
                     checked={status === 'completed'}
                     onChange={handleChange}
                 />
-                <label htmlFor={id} className={styles.text} >{text}</label>
-                <button onClick={handleDelete} className={styles.button}>
-                    <FaTrashAlt/>
-                </button>
+                <label htmlFor={id} className={styles.text}>{text}</label>
+                <span className={styles.icon}>
+                    <button onClick={handleDelete} className={styles.button}>
+                        <FaTrashAlt/>
+                    </button>
+                </span>    
             </li>
         </>
     )
