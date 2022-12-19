@@ -4,7 +4,15 @@ import Todo from '../Todo/Todo';
 import styles from './TodoList.module.css';
 
 const TodoList = ({filter}) => {
-  const [todos, setTodos] = useState(() => readTodosFromLocalStorage());
+  // useState(초기화하는 함수) -> 함수의 레퍼런스만 전달
+  // useState(()=> 초기화하는함수()) // 위와 동일함, 단, 콜백함수를 만듬 (단점을 꼽자면, 불필요한 함수가 만들어 진다는 단점이 있음)
+  
+  /*const [todos, setTodos] = useState(function() {
+    readTodosFromLocalStorage();
+  });*/
+
+  // 축약가능
+  const [todos, setTodos] = useState(readTodosFromLocalStorage);
 
   // 새로운 투두를 todos에 업데이트
   const handleAdd = (todo) => setTodos([...todos, todo]);
