@@ -10,7 +10,7 @@ export const DarkModeProvider = ({children}) => {
     const toggleDarkMode = () => {
         // 다크모드와 반대
         setDarkMode(!darkMode);
-        updateDarkMode(darkMode);
+        updateDarkMode(!darkMode);
     };
 
     useEffect(() => {
