@@ -38,7 +38,7 @@ const TodoList = ({filter}) => {
           <Todo
             key={item.id}
             todo={item} 
-            onupdate={handleUpdate} 
+            onUpdate={handleUpdate}
             onDelete={handleDelte} 
           />
         ))}
